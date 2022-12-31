@@ -1,11 +1,12 @@
 .tdbc-card {
   display: flex;
   position: relative;
+  -ms-flex-direction: column;
   flex-direction: column;
   width: 100%;
   border-radius: $tdbc-border-radius;
   background-color: #fff;
-  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.18);
+  box-shadow: 0 3px 5px rgba(0 0 0 18%);
 
   &__title {
     margin-bottom: 1rem;
@@ -39,6 +40,7 @@
   &__content {
     display: flex;
     position: relative;
+    -ms-flex-direction: column;
     flex-direction: column;
     flex-grow: 1;
     padding: 24px;
@@ -54,11 +56,11 @@
       z-index: 1;
     }
 
-    > ul {
+    >ul {
       list-style-type: disc;
       padding-left: 1rem;
 
-      li + li {
+      li+li {
         margin-top: 0.5rem;
       }
     }
@@ -73,7 +75,8 @@
     max-height: 10em;
     border-radius: $tdbc-border-radius $tdbc-border-radius 0 0;
   }
-  // stylelint-enable
+
+  /* stylelint-enable */
 
   &--outlined {
     border: 1px solid scale-color($tdbc-color-gray, $lightness: 50%);
